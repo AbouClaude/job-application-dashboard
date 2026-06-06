@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Application Dashboard — Architecture</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0e1117;
+      --surface: #161b22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --border: #30363d;
+      --accent: #58a6ff;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --surface: #f6f8fa;
+        --text: #1f2328;
+        --muted: #656d76;
+        --border: #d0d7de;
+        --accent: #0969da;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+    h1 { font-size: 1.75rem; margin: 0 0 0.5rem; }
+    h2 {
+      font-size: 1.2rem;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    p, li { color: var(--muted); }
+    .lead { font-size: 1rem; margin-bottom: 2rem; }
+    .diagram {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--surface); }
+    pre {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+    a { color: var(--accent); }
+    .note {
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 1rem;
+      background: var(--surface);
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Job Application Dashboard — Architecture</h1>
+    <p class="lead">
+      Layered view of the project: storage → data pipeline → logic & charts → UI → pages.
+      Source: <a href="ARCHITECTURE.md">ARCHITECTURE.md</a>
+    </p>
+
+    <div class="note">
+      <strong>Sankey vs flowchart:</strong> Sankey link width shows <em>volume</em> (row counts).
+      The flowchart shows <em>code structure</em> and module dependencies.
+    </div>
+
+    <h2>Module structure (code layout)</h2>
+    <div class="diagram mermaid">
+flowchart TB
+    subgraph Storage
+        CSV["Jobs Applications - Jobs Applying.csv"]
+        ENV["JOB_APPLICATIONS_CSV (optional)"]
+    end
+
+    subgraph Data["Data layer"]
+        DE["Utils/data_engineering.py<br/>load · clean · cache"]
+    end
+
+    subgraph Logic["Logic & visualization"]
+        AN["Utils/analytics.py<br/>metrics · filters · doc flags"]
+        FN["Utils/Functions.py<br/>Plotly · UpSet · cleaning helpers"]
+    end
+
+    subgraph UI["Shared UI"]
+        SU["Utils/streamlit_ui.py<br/>metrics row · sidebar filters"]
+    end
+
+    subgraph Pages["Streamlit pages"]
+        HOME["Home.py<br/>overview dashboard"]
+        MONTH["Pages/Month_Analysis.py<br/>monthly drill-down"]
+    end
+
+    ENV -.-> DE
+    CSV --> DE
+    DE --> FN
+    DE --> HOME
+    DE --> MONTH
+    AN --> SU
+    AN --> HOME
+    FN --> HOME
+    FN --> MONTH
+    SU --> HOME
+    SU --> MONTH
+    </div>
+
+    <h2>Data flow (runtime — Sankey)</h2>
+    <p>503 applications after filtering out <strong>Normal Work</strong>.</p>
+    <div class="diagram mermaid">
+sankey-beta
+    Raw CSV,Cleaned applications,503
+    Raw CSV,Excluded Normal Work,39
+    Cleaned applications,Replied,335
+    Cleaned applications,Awaiting reply,168
+    </div>
+
+    <h2>What each page renders</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Page</th>
+          <th>Filters</th>
+          <th>Charts / outputs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Home</strong></td>
+          <td>Month, status, position type</td>
+          <td>Reply metrics · pies · cities & companies · UpSet · box plot</td>
+        </tr>
+        <tr>
+          <td><strong>Monthly Analysis</strong></td>
+          <td>Month multiselect</td>
+          <td>Reply metrics · daily stacked bars · pies · box plot</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>File tree</h2>
+    <pre>job searching project/
+├── Home.py
+├── Pages/
+│   └── Month_Analysis.py
+├── Utils/
+│   ├── data_engineering.py
+│   ├── analytics.py
+│   ├── Functions.py
+│   └── streamlit_ui.py
+├── ARCHITECTURE.md
+├── architecture.html          ← you are here
+├── test_data_engineering.py
+├── requirements.txt
+└── Jobs Applications - Jobs Applying.csv</pre>
+  </main>
+
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "default",
+      securityLevel: "loose",
+      flowchart: { htmlLabels: true, curve: "basis" },
+    });
+  </script>
+</body>
+</html>

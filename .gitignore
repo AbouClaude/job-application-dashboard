@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+Untitled.ipynb
+
+# IDE / OS
+.vscode/
+desktop.ini
+
+# Personal data — never commit your real application history
+Jobs Applications - Jobs Applying.csv

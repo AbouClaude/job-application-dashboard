@@ -1,0 +1,301 @@
+Date,Time,Position Name,Position Type,Company Name,Status,Location,Action Period,CV_CL_RL_CR
+06.01.2025,,Junior ABAP Developer,Developer,Company 1,Not selected,Berlin,23.0,1100.0
+06.01.2025,,Junior Java Developer,Developer,Company 1,Waiting,Berlin,,1100.0
+06.01.2025,,NLP Developer,Machine Learning,Company 2,Not selected,(Belgium/ Remotly )?,29.0,1100.0
+06.01.2025,,Junior Software Engineer,Developer,Company 3,Waiting,(Germany/ Remotly),,1100.0
+06.01.2025,,Software Development (python),Developer,Company 4,Not selected,Berlin,1.0,1100.0
+07.01.2025,,Data Research Speicalist,Machine Learning,Company 5,Not selected,Berlin,1.0,1100.0
+07.01.2025,,Developer SAP Data Management,Developer,Company 6,Interview,Mannheim,2.0,1111.0
+08.01.2025,,Data Science & ML Engineer,Data Science,Company 7,Not selected,Hamburg,5.0,1011.0
+10.01.2025,,Data Analysis & Product Builder,Data Analysis,Company 8,Interview,Berlin,0.0,1000.0
+10.01.2025,,Data Scientist,Data Science,Company 9,Waiting,Munich,,1000.0
+10.01.2025,,Product Analyst,Data Analysis,Company 10,Not selected,Berlin,,1100.0
+12.01.2025,,Junior IT Consultant ( IoT & AI ),Developer,Company 11,Waiting,Berlin,,1011.0
+12.01.2025,,Junior Consultant SAP BI,Data Analysis,Company 11,Waiting,Berlin,,1111.0
+14.01.2025,,Data Scientist,Data Science,Company 12,Not selected,Frankfurt,84.0,1111.0
+14.01.2025,,Graduate Data Scientist,Data Science,Company 13,Waiting,Munich,,1000.0
+14.01.2025,,DS & ML Architect,Data Science,Company 11,Not selected,Berlin,1.0,1011.0
+16.01.2025,,Junior Data Scientist,Data Science,Company 14,Not selected,Munich,4.0,1011.0
+17.01.2025,,ML Engineer,Machine Learning,Company 15,Not selected,"bernau, Brandenburg",1.0,1000.0
+17.01.2025,,Data Scientist,Data Science,Company 16,Not selected,Fellbach,11.0,1111.0
+17.01.2025,,Data Scientist,Data Science,Company 17,Not selected,Bavaria,3.0,1000.0
+17.01.2025,,Junior Software Developer,Developer,Company 18,Not selected,Stuttgart,6.0,1010.0
+17.01.2025,,Junior Software Developer Python,Developer,Company 18,Not selected,Karlsruhe ,6.0,1110.0
+20.01.2025,,Growth Analysis,Data Analysis,Company 19,Not selected,Berlin,7.0,1000.0
+20.01.2025,,Data Scientist,Data Science,Company 20,Not selected,Düsseldorf,25.0,1111.0
+20.01.2025,,IDM Analyst,Data Analysis,Company 21,Not selected,Berlin,3.0,1010.0
+20.01.2025,,ESM with Qualitrics and DA,Data Analysis,Company 22,Not selected,Berlin,3.0,1011.0
+20.01.2025,,Consultant AI & DA/ DS,Data Science,Company 23,Not selected,Berlin,2.0,1111.0
+21.01.2025,,Data Engineer,Data Engineer,Company 24,Waiting,Berlin,,1000.0
+21.01.2025,,Data Scientist/ AI Eng,Data Science,Company 25,Not selected,Berlin,6.0,1111.0
+21.01.2025,,Data Scientist,Data Science,Company 26,Not selected,Berlin,10.0,1111.0
+22.01.2025,,Junior Applied Scientist (Payments),Data Science,Company 27,Waiting,Berlin,,1111.0
+22.01.2025,,Consultant DS & AI,Data Science,Company 28,Not selected,Berlin,6.0,1111.0
+24.01.2025,,Junior Data Ops Eng - Data Sourcing,Data Engineer,Company 29,Not selected,Berlin,20.0,1100.0
+25.01.2025,,Junior Python Developer,Developer,Company 30,Waiting,Berlin,,1111.0
+26.01.2025,,Data Engineer - Clinical Data Center,Data Engineer,Company 31,Not selected,Berlin,10.0,1111.0
+26.01.2025,,AI Eng/ AI Specialist All rounder,Data Engineer,Company 32,Not selected,Hannover,32.0,1011.0
+26.01.2025,,Junior Analyst - Health Care Data,Data Analysis,Company 29,Not selected,Hamburg,14.0,1100.0
+27.01.2025,,Junior Analyst - Modelled Data,Data Analysis,Company 29,Not selected,Hamburg,28.0,1111.0
+27.01.2025,,Data Engineer,Data Engineer,Company 33,Waiting,Berlin,,1100.0
+28.01.2025,,Consultant Data Management & Innovations,Developer,Company 6,Waiting,Mannheim,,1111.0
+29.01.2025,,PM Data Analytics/ Integration/ Data Lake,Data Analysis,Company 34,Waiting,Frankfurt,,1111.0
+31.01.2025,,Junior Python Entwickler,Developer,Company 35,Not selected,Leipzig,5.0,1011.0
+01.02.2025,,Junior Developer SAP Cloud Development,Developer,Company 36,Not selected,Walldorf,25.0,1111.0
+01.02.2025,,Junior Consultant Digital Analytics,Developer,Company 37,Not selected,Hamburg,17.0,1011.0
+03.02.2025,8:00,Data Science Gen AI,Data Science,Company 38,Not selected,Karlsruhe ,4.0,1011.0
+03.02.2025,8:30,Junior Software Developer Python,Developer,Company 39,Not selected,Berlin,21.0,1011.0
+03.02.2025,9:00,Junior Low Code Developer,Developer,Company 40,Not selected,Berlin,2.0,1111.0
+04.02.2025,15:40,Data Engineer,Data Engineer,Company 41,Not selected,Berlin,9.0,1010.0
+04.02.2025,16:20,Data Analyst,Data Analysis,Company 42,Waiting,Berlin,,1011.0
+04.02.2025,16:25,Data Analyst Internship,Data Analysis,Company 42,Not selected,Berlin,1.0,1011.0
+04.02.2025,17:40,Machine Learning Engineer,Machine Learning,Company 43,Not selected,Berlin,9.0,1100.0
+04.02.2025,17:50,ML Research Engineer,Machine Learning,Company 44,Not selected,Berlin,16.0,1000.0
+04.02.2025,17:55,ML & AI Engineer,Machine Learning,Company 45,Not selected,Cologne,8.0,1100.0
+04.02.2025,19:10,Junior Python Developer,Developer,Company 46,Not selected,Munich,3.0,1111.0
+04.02.2025,19:15,Machine Learning Scientist,Machine Learning,Company 47,Not selected,Berlin,10.0,1100.0
+04.02.2025,19:20,Data Analyst E health,Data Analysis,Company 48,Not selected,Berlin,2.0,1011.0
+04.02.2025,19:35,Data Analyst,Data Analysis,Company 49,Not selected,Hamburg,3.0,1000.0
+04.02.2025,19:42,Software Developer,Developer,Company 50,Waiting,Berlin,,1100.0
+06.02.2025,15:55,Data Science,Data Science,Company 51,Not selected,Berlin,20.0,1111.0
+06.02.2025,16:25,ML Engineer Personalization,Machine Learning,Company 52,Not selected,Berlin,5.0,1100.0
+06.02.2025,17:00,ML Engineer,Machine Learning,Company 53,Waiting,Berlin,,1111.0
+06.02.2025,18:00,Data Analysis & Product Builder,Data Analysis,Company 26,Not selected,Berlin,34.0,1111.0
+06.02.2025,18:47,NLP Research Assistant,Machine Learning,Company 54,Not selected,Karlsruhe ,40.0,1111.0
+07.02.2025,15:50,Analytics Engineer,Data Engineer,Company 55,Not selected,Berlin,3.0,1000.0
+07.02.2025,16:30,Data Analyst - Data Visualisation Squad,Data Analysis,Company 4,Not selected,Berlin,31.0,1100.0
+07.02.2025,16:40,Machine Learning Engineer,Machine Learning,Company 56,Not selected,Berlin,7.0,1111.0
+07.02.2025,16:55,Python Test Automation Engineer,Developer,Company 57,Waiting,Berlin,,1000.0
+07.02.2025,17:10,Junior Data Engineer,Data Engineer,Company 58,Waiting,Frankfurt,,1000.0
+10.02.2025,12:30,DA\Decision Scientist Category Management,Data Analysis,Company 59,Not selected,Berlin,3.0,1100.0
+10.02.2025,12:50,DA\Decision Scientist Digital Marketing,Data Analysis,Company 59,Not selected,Berlin,9.0,1100.0
+20.02.2025,13:55,Junior Software Python Developer focus Gen AI,Developer,Company 36,Not selected,Walldorf,1.0,1111.0
+20.02.2025,14:10,Developer Graduate,Developer,Company 60,Not selected,Germany,25.0,1101.0
+20.02.2025,14:15,Data Analysis,Data Analysis,Company 61,Waiting,Germany,,1000.0
+20.02.2025,19:05,Data Science focus Data Eng,Data Engineer,Company 62,Not selected,Lingen,6.0,1011.0
+20.02.2025,19:10,Software Developer,Developer,Company 62,Not selected,Lingen,13.0,1011.0
+20.02.2025,19:55,Junior Analytics Engineer,Data Analysis,Company 21,Not selected,Berlin,14.0,1111.0
+20.02.2025,20:50,Junior CX/UX Designer,Developer,Company 63,Not selected,Berlin,29.0,1111.0
+20.02.2025,21:15,AI ML Engineer,Machine Learning,Company 64,Not selected,Berlin,21.0,1111.0
+20.02.2025,21:25,Junior Business Analyst,Data Analysis,Company 65,Not selected,Frankfurt,7.0,1000.0
+02.03.2025,22:50,Consultant AI & Analytics,Data Engineer,Company 66,Waiting,Frankfurt,,1111.0
+03.03.2025,19:30,Data Quality Analyst,Data Analysis,Company 67,Waiting,Berlin,,1000.0
+06.03.2025,19:40,Consultant Data Strategy AI & Data,Data Engineer,Company 68,Not selected,Berlin,4.0,1111.0
+06.03.2025,19:50,ABAP Junior Developer,Developer,Company 36,Not selected,Walldorf,1.0,1111.0
+06.03.2025,20:15,Data Analysis,Data Analysis,Company 69,SCAM,Germany,,1000.0
+06.03.2025,21:00,Full Stack Software Development,Developer,Company 70,Waiting,Berlin,,1111.0
+06.03.2025,21:10,Junior IT Engineer Workplace Technology,Developer,Company 71,Not selected,Berlin,4.0,1000.0
+06.03.2025,21:20,Data Engineer,Data Engineer,Company 71,Not selected,Berlin,1.0,1100.0
+10.03.2025,18:15,ML Engineer - NLP,Machine Learning,Company 72,Not selected,Berlin,1.0,1011.0
+10.03.2025,18:20,Data Analysis,Data Analysis,Company 73,Waiting,Berlin,,1000.0
+10.03.2025,18:30,Junior Data Engineer,Data Engineer,Company 74,Not selected,Berlin,3.0,1011.0
+13.03.2025,1:20,Junior Data Analyst,Data Analysis,Company 75,Not selected,Berlin,12.0,1100.0
+16.03.2025,23:15,"Data Scientist - (Logistics, Choice)",Data Science,Company 4,Not selected,Berlin,19.0,1011.0
+17.03.2025,10:55,Junior AI Solution Engineer,Data Engineer,Company 75,Not selected,Berlin,9.0,1100.0
+18.03.2025,14:20,Data Engineer,Data Engineer,Company 76,Not selected,Berlin,2.0,1000.0
+18.03.2025,16:15,Applied Scientist,Data Engineer,Company 27,Not selected,Berlin,2.0,1100.0
+24.03.2025,15:55,Analytics and Data Intelligence Associated,Data Analysis,Company 36,Not selected,Potsdam,1.0,1111.0
+28.03.2025,13:50,Machine Learning Engineer,Machine Learning,Company 77,Not selected,Berlin,7.0,1000.0
+28.03.2025,14:10,Data Scientist,Data Science,Company 78,Not selected,Berlin,0.0,1111.0
+28.03.2025,14:20,Associated Data Engineer,Data Engineer,Company 79,Not selected,Belrin,3.0,1000.0
+30.03.2025,20:10,Junior Data Analyst Financial Empowerment,Data Analysis,Company 21,Not selected,Berlin,18.0,1000.0
+30.03.2025,15:25,Junior Data Scientist,Data Science,Company 80,Not selected,Berlin,53.0,1111.0
+07.04.2025,11:00,Data Insights - Marketing Analyst,Data Analysis,Company 81,Not selected,Berlin,3.0,1111.0
+07.04.2025,11:25,Full Stack Software Development,Developer,Company 82,Not selected,Berlin,21.0,1111.0
+07.04.2025,12:05,Data Scientist,Data Science,Company 83,Interview,Berlin,,1000.0
+21.04.2025,21:00,Data Engineer,Data Engineer,Company 41,Not selected,Berlin,8.0,1000.0
+14.05.2025,20:11,Machine Learning Engineer,Machine Learning,Company 84,Waiting,Berlin,,1000.0
+17.05.2025,9:28,AI Software Engineer,Developer,Company 85,Waiting,Berlin,,1000.0
+17.05.2025,9:35,Research Assistant,Machine Learning,Company 86,Waiting,Berlin,,1000.0
+17.05.2025,9:52,Record Spacialist,Developer,Company 87,Waiting,Remote,,1000.0
+17.05.2025,10:07,Junior Data Architect,Data Engineer,Company 88,Waiting,Berlin,,1000.0
+17.05.2025,11:40,Data Science,Data Science,Company 89,Not selected,Berlin,4.0,1100.0
+17.05.2025,12:03,Data Science (Global Ranking),Data Science,Company 4,Waiting,Berlin,,1100.0
+17.05.2025,12:06,Data Analysis,Data Analysis,Company 90,SCAM,Berlin,,1100.0
+17.05.2025,12:49,Marketing Data Analysis,Data Analysis,Company 91,Waiting,Berlin,,1100.0
+21.05.2025,13:44,Data Science,Data Science,Company 92,Not selected,Berlin,1.0,1111.0
+21.05.2025,13:47,Junior Data Analysis,Data Analysis,Company 93,Not selected,Berlin,29.0,1000.0
+21.05.2025,13:51,Data Analysis,Data Analysis,Company 94,SCAM,Berlin,,1000.0
+22.05.2025,13:07,Junior Data Analysis,Data Analysis,Company 95,Not selected,Berlin,4.0,1000.0
+23.05.2025,13:05,Article Pipeline Data Analysis,Data Analysis,Company 96,Not selected,Berlin,13.0,1011.0
+24.05.2025,13:34,Junior Data Scientist,Data Science,Company 97,Waiting,Berlin,,1000.0
+24.05.2025,13:47,ML Engineer at AI Coe,Machine Learning,Company 36,Not selected,Walldorf,2.0,1000.0
+24.05.2025,13:49,Data Assistant,Data Science,Company 98,SCAM,Berlin,,1000.0
+24.05.2025,13:57,AI Engineer,Data Engineer,Company 99,Not selected,Berlin,7.0,1000.0
+24.05.2025,14:17,"Data & Insights Lead, Player Care",Data Science,Company 100,Not selected,Helenski,1.0,1000.0
+24.05.2025,16:47,Data Scientist,Data Science,Company 78,Waiting,Berlin,,1000.0
+25.05.2025,21:26,ML Engineer & Python Developer,Machine Learning,Company 101,Waiting,Berlin,,1000.0
+27.05.2025,21:32,Junior Project Developer ML,Machine Learning,Company 36,Waiting,Berlin,,1111.0
+27.05.2025,22:54,Data Analysis,Data Analysis,Company 102,Not selected,Berlin,6.0,1000.0
+29.05.2025,22:09,Model Risk Associate,Data Science,Company 21,Not selected,Berlin,11.0,1100.0
+31.05.2025,9:15,Decision Science (Data Analyst),Data Analysis,Company 59,Not selected,Berlin,7.0,1000.0
+31.05.2025,10:37,Junior Data Scientist,Data Science,Company 103,Waiting,Berlin,,1000.0
+31.05.2025,10:54,Junior Decision Engineer,Data Engineer,Company 104,Interview,Berlin,12.0,1000.0
+31.05.2025,23:57,Data Engineer,Data Engineer,Company 105,Not selected,Berlin,3.0,1000.0
+01.06.2025,9:24,Analytics Engineer/Data Generalist,Data Analysis,Company 106,Not selected,Munich,34.0,1000.0
+02.06.2025,9:00,Data Engineer,Data Engineer,Company 106,Waiting,Munich,,1000.0
+12.06.2025,16:16,Data Analysis,Data Analysis,Company 107,Not selected,Berlin,70.0,1110.0
+12.06.2025,20:05,Analytics Engineer,Data Engineer,Company 108,Not selected,Berlin,1.0,1000.0
+12.06.2025,20:18,"Data Scientist, Amazon Music - DISCO",Data Science,Company 109,Not selected,Berlin,2.0,1000.0
+12.06.2025,8:35,Meteorological Data Scientist,Data Science,Company 110,Waiting,Berlin,,1000.0
+12.06.2025,9:05,Software Engineer,Developer,Company 106,Not selected,Berlin,26.0,1000.0
+14.06.2025,10:55,Shop Analytics,Data Analysis,Company 111,Not selected,Hamburg,5.0,1000.0
+14.06.2025,11:00,Data Engineer,Data Engineer,Company 112,Not selected,Berlin,12.0,1000.0
+17.06.2025,10:30,Data Science Internship,Data Science,Company 113,Waiting,Berlin,,1001.0
+17.06.2025,12:45,Data Engineer - Marketing Insights,Data Engineer,Company 114,Not selected,Essen,6.0,1011.0
+17.06.2025,12:50,SW Data Intelligence focus ML and Gen AI,Machine Learning,Company 115,Not selected,Cologne,8.0,1001.0
+18.06.2025,8:40,Data Analysis,Data Analysis,Company 116,Not selected,Berlin,13.0,1010.0
+18.06.2025,10:45,Data Analyst - Product,Data Analysis,Company 102,Not selected,Berlin,5.0,1000.0
+18.06.2025,1:35,Data Analyst - Payment,Data Analysis,Company 4,Not selected,Berlin,22.0,1000.0
+18.06.2025,14:25,Software Engineer,Developer,Company 117,Not selected,Berlin,8.0,1000.0
+20.06.2025,10:42,Machine Learning Engineer,Machine Learning,Company 118,Not selected,Remote,11.0,1000.0
+20.06.2025,10:48,Data Analyst Internship,Data Analysis,Company 119,Not selected,Berlin,6.0,1000.0
+20.06.2025,11:35,AI Engineer,Data Engineer,Company 102,Not selected,Berlin,23.0,1000.0
+20.06.2025,11:47,Quality Assurance Eng Automation,Developer,Company 120,Not selected,Mannheim,0.0,1000.0
+20.06.2025,12:35,Data Science Engineering/ Consultant,Data Science,Company 121,Not selected,Hamburg,21.0,1111.0
+20.06.2025,13:09,Junior Data Engineer,Data Engineer,Company 122,Not selected,Remote,13.0,1100.0
+21.06.2025,21:45,Data Engineer,Data Engineer,Company 123,Not selected,Berlin,5.0,1011.0
+22.06.2025,11:50,Data Analysis,Data Analysis,Company 124,Waiting,Berlin,,1000.0
+25.06.2025,23:10,Data Analysis,Data Analysis,Company 125,Not selected,Berlin,1.0,1111.0
+27.06.2025,18:10,AI Engineer,Data Engineer,Company 43,Interview,Berlin,19.0,1100.0
+27.06.2025,18:25,Data Analyst,Data Analysis,Company 126,Waiting,Berlin,,1100.0
+27.06.2025,23:25,Data Engineer,Data Engineer,Company 41,Not selected,Berlin,13.0,1011.0
+27.06.2025,23:40,Informaticer / Data Science,Data Science,Company 127,Not selected,Essen,6.0,1000.0
+28.06.2025,9:55,Junior Data Engineer / Data Science,Data Science,Company 128,Waiting,Fürth,,1111.0
+28.06.2025,10:15,Data Exploration Consultant,Data Engineer,Company 129,Not selected,Stuttgart,9.0,1100.0
+29.06.2025,17:55,Marketing Data Analysis,Data Analysis,Company 71,Not selected,Berlin,2.0,1000.0
+29.06.2025,19:00,Junior Data Scientist,Data Science,Company 130,Interview,Berlin,5.0,1100.0
+30.06.2025,8:30,Product Data Analysis,Data Analysis,Company 19,Not selected,Berlin,7.0,1000.0
+30.06.2025,12:50,Founding Engineer,Data Engineer,Company 131,Not selected,Berlin,3.0,1000.0
+30.06.2025,18:15,Junior Business Analyst,Data Analysis,Company 132,Not selected,Berlin,8.0,1000.0
+01.07.2025,9:40,(Product) Data Analysis,Data Analysis,Company 126,Not selected,Berlin,2.0,1100.0
+01.07.2025,9:50,Data Science / AI Engineer,Data Science,Company 133,Not selected,Berlin,10.0,1011.0
+03.07.2025,12:20,Junior Software Developer Data Goverance,Developer,Company 36,Not selected,Walldorf,5.0,1011.0
+03.07.2025,12:30,Applied Scientist - Search/NLP/IR ,Machine Learning,Company 27,Not selected,Berlin,19.0,1011.0
+04.07.2025,9:50,NLP Data Scientist - AI Engineer,Machine Learning,Company 134,Not selected,Berlin,14.0,1100.0
+04.07.2025,9:55,Junior AI Solution Engineer,Data Science,Company 135,Waiting,Berlin,,1011.0
+04.07.2025,10:50,Data Scientist,Data Science,Company 78,Waiting,Berlin,,1111.0
+04.07.2025,11:00,Junior Process Automation Specialist - Python ,Data Science,Company 136,Not selected,Berlin,28.0,1000.0
+04.07.2025,11:05,AI/ML Engineer,Machine Learning,Company 137,Waiting,Berlin,,1000.0
+06.07.2025,21:25,Business Analyst Lidl,Data Analysis,Company 138,Not selected,Berlin,4.0,1011.0
+06.07.2025,22:11,Sales Data Analysis,Data Analysis,Company 75,Not selected,Berlin,10.0,1000.0
+07.07.2025,23:40,Analytical Linguist,Data Science,Company 139,Not selected,Berlin,2.0,1000.0
+08.07.2025,22:05,Data Science Internship,Data Science,Company 140,Interview,Berlin,6.0,1011.0
+08.07.2025,22:10,Data Science,Data Science,Company 140,Not selected,Berlin,6.0,1011.0
+08.07.2025,22:35,Junior Software Engineer,Data Science,Company 27,Not selected,Berlin,37.0,1011.0
+09.07.2025,22:15,Data Engineer BI,Data Engineer,Company 141,Not selected,Berlin,5.0,1011.0
+09.07.2025,22:25,Junior Strategy Operation Manager,Developer,Company 142,Not selected,Berlin,4.0,1000.0
+09.07.2025,23:55,Logistic Data Analyst,Data Analysis,Company 136,Not selected,Berlin,27.0,1000.0
+10.07.2025,19:25,Intern GenAI Specialist,Data Science,Company 143,Not selected,Munich,13.0,1011.0
+10.07.2025,19:45,Software Developer,Developer,Company 144,Not selected,Berlin,34.0,1010.0
+12.07.2025,8:45,Graduate Technical Business Analyst,Developer,Company 145,Waiting,Berlin,,1111.0
+12.07.2025,9:00,IT Specialist,Developer,Company 146,Not selected,Berlin,10.0,1000.0
+13.07.2025,13:25,Analytics Engineer,Data Analysis,Company 147,Not selected,Berlin,3.0,1100.0
+13.07.2025,13:40,Product Data Analysis,Data Analysis,Company 148,Not selected,Munich,4.0,1100.0
+13.07.2025,20:35,Data Enthu­siast,Data Science,Company 18,Waiting,Stuttgart,,1011.0
+13.07.2025,21:20,Applied AI Engineer,Data Engineer,Company 149,Not selected,Berlin,1.0,1000.0
+14.07.2025,13:40,Applied NLP Engineer,Machine Learning,Company 150,Waiting,Berlin,,1000.0
+14.07.2025,14:20,Data Scientist,Data Science,Company 151,Not selected,Berlin,42.0,1010.0
+15.07.2025,13:00,Data Scientist,Data Science,Company 152,Waiting,Berlin,,1100.0
+15.07.2025,18:30,Product Scientist/ Data Analysis,Data Analysis,Company 153,Not selected,Berlin,7.0,1000.0
+15.07.2025,23:55,Data Scientist - Power Trading,Data Science,Company 154,Not selected,Berlin,30.0,1000.0
+16.07.2025,14:20,"Data Scientist - Logistics Service, AI Autopilot)",Data Science,Company 4,Not selected,Berlin,14.0,1100.0
+17.07.2025,10:45,Data Analyst - Client Experience,Data Analysis,Company 155,Not selected,Berlin,4.0,1111.0
+17.07.2025,14:45,Performance Analyst,Data Analysis,Company 52,Not selected,Berlin,4.0,1100.0
+19.07.2025,9:15,Junior Devops Engineer,Data Engineer,Company 106,Not selected,Berlin,6.0,1000.0
+21.07.2025,21:25,Data Scientist,Data Science,Company 156,Waiting,Berlin,,1111.0
+22.07.2025,20:13,Junior Marketing Automation & AI Specialist ,Data Science,Company 157,Not selected,Berlin,16.0,1011.0
+22.07.2025,22:10,Data Engineer / Data Science,Data Science,Company 158,Waiting,Berlin,,1111.0
+23.07.2025,19:30,Data Scientist,Data Science,Company 159,Not selected,Berlin,1.0,1100.0
+23.07.2025,20:55,Junior Data Analyst,Data Analysis,Company 160,Not selected,Berlin,14.0,1011.0
+24.07.2025,22:00,AI Research Engineer,Machine Learning,Company 161,Not selected,Berlin,4.0,1000.0
+24.07.2025,22:10,Junior Operations Specialist Asset Management ,Data Science,Company 126,Not selected,Berlin,50.0,1100.0
+25.07.2025,18:50,Junior Data Engineer / Process Manager,Data Engineer,Company 120,Not selected,Mannheim,12.0,1000.0
+27.07.2025,11:25,Data Scientist,Data Science,Company 92,Waiting,Berlin,,1011.0
+27.07.2025,11:30,Data Scientist,Data Science,Company 162,Waiting,Berlin,,1000.0
+28.07.2025,0:15,Data Scientist,Data Science,Company 163,Not selected,Berlin,8.0,1100.0
+28.07.2025,0:25,Python Developer and Machine Learning,Machine Learning,Company 164,Waiting,Berlin,,1100.0
+28.07.2025,0:35,Machine Learning Operations Engineer ,Machine Learning,Company 165,Not selected,Berlin,4.0,1100.0
+29.07.2025,8:50,Python Developer / Data Analysis / Data Science,Data Science,Company 166,Waiting,Berlin,,1111.0
+29.07.2025,9:00,Data Scientist,Data Science,Company 167,Waiting,Berlin,,1000.0
+29.07.2025,9:05,"Applied Scientist, AGI, AGI Information",Data Science,Company 109,Not selected,Berlin,0.0,1000.0
+29.07.2025,9:25,Junior Sustainability DA | Researcher | DE,Data Science,Company 168,Not selected,Berlin,0.0,1100.0
+30.07.2025,8:30,AI Compliance Specialist,Developer,Company 169,Not selected,Berlin,6.0,1010.0
+30.07.2025,8:40,Data Analyst,Data Analysis,Company 170,Waiting,Berlin,,1100.0
+30.07.2025,10:30,"Data Analyst, Client Onboarding",Data Analysis,Company 155,Not selected,Berlin,6.0,1011.0
+30.07.2025,11:10,Data Scientist,Data Science,Company 155,Not selected,Berlin,6.0,1011.0
+30.07.2025,14:50,Data Science in R&D,Data Science,Company 171,Not selected,Neuss,27.0,1011.0
+31.07.2025,8:00,Data Analyst,Data Analysis,Company 172,Not selected,Stuttgart,7.0,1100.0
+31.07.2025,8:05,Catalog Specialist ,Developer,Company 52,Not selected,Berlin,8.0,1000.0
+31.07.2025,8:10,Analytics Engineer / Data Generalist,Data Engineer,Company 106,Not selected,Munich,7.0,1000.0
+31.07.2025,8:35,Decision Science (Data Analyst),Data Science,Company 59,Waiting,Berlin,,1000.0
+31.07.2025,10:15,Junior Payment Analyst,Data Analysis,Company 173,Waiting,Berlin,,1000.0
+31.07.2025,14:00,Product Data Analyst,Data Analysis,Company 174,Not selected,Berlin,4.0,1100.0
+01.08.2025,0:45,Associated Data Scientist,Data Science,Company 4,Not selected,Berlin,26.0,1000.0
+02.08.2025,0:10,Junior Machine Learning Engineer,Machine Learning,Company 175,Not selected,Berlin,39.0,1110.0
+03.08.2025,9:30,Operations Specialist,Data Science,Company 176,Not selected,Berlin,2.0,1000.0
+03.08.2025,20:40,Data Analyst,Data Analysis,Company 177,Not selected,Mannheim,18.0,1100.0
+06.08.2025,20:40,AI Integrations Developer,Data Science,Company 178,Not selected,Berlin,12.0,1100.0
+06.08.2025,20:45,Analytics Engineer,Data Engineer,Company 77,Not selected,Berlin,2.0,1000.0
+06.08.2025,21:10,Data Scientist,Data Science,Company 179,Not selected,Berlin,5.0,1100.0
+06.08.2025,21:15,(Junior) Machine Learning Engineer ,Machine Learning,Company 180,Not selected,Berlin,7.0,1010.0
+06.08.2025,21:35,Mobile Application Test Engineers,Developer,Company 70,Waiting,Berlin,,1010.0
+07.08.2025,22:35,Data Analyst,Data Analysis,Company 181,Not selected,Munich,5.0,1111.0
+08.08.2025,21:45,Junior Content Data Manager - Fashion Studios,Data Engineer,Company 27,Not selected,Berlin,3.0,1010.0
+08.08.2025,22:10,Applied Machine Learning Engineer,Machine Learning,Company 182,Not selected,Göttingen,25.0,1111.0
+08.08.2025,22:35,Software Engineer Tasking,Developer,Company 183,Not selected,Berlin,26.0,1100.0
+08.08.2025,22:45,Software Engineer in Test,Developer,Company 184,Not selected,Berlin,12.0,1000.0
+09.08.2025,11:30,AI Media Engineer,Data Science,Company 185,Not selected,Berlin,3.0,1110.0
+11.08.2025,13:55,ML Engineer - Data Scientist - LLM Agents,Machine Learning,Company 96,Not selected,Berlin,24.0,1011.0
+11.08.2025,14:05,Data Scientist - Antifraud,Data Science,Company 4,Waiting,Berlin,,1100.0
+11.08.2025,14:20,Operations Specialist,Data Science,Company 52,Not selected,Berlin,2.0,1100.0
+11.08.2025,14:40,Sales Data & Insights Specialist ,Data Analysis,Company 126,Not selected,Berlin,3.0,1100.0
+12.08.2025,9:00,Software-Engineer Data Science,Data Science,Company 186,Waiting,Friedrichhafen,,1000.0
+13.08.2025,9:30,Junior Power BI Analyst,Data Analysis,Company 187,Waiting,Berlin,,1100.0
+13.08.2025,9:50,(Senior) Data Quality Developer,Data Science,Company 188,Not selected,Mülheim,30.0,1011.0
+14.08.2025,9:55,Data Visualization Engineer,Data Analysis,Company 189,Waiting,Berlin,,1110.0
+14.08.2025,10:15,AI Workflow Engineer,Data Engineer,Company 190,Waiting,Munich,,1000.0
+15.08.2025,14:15,Financial  Data Scientist,Data Science,Company 191,Not selected,Berlin,7.0,1000.0
+16.08.2025,15:35,Applied Data Science Engineer,Data Science,Company 89,Not selected,Berlin,14.0,1100.0
+16.08.2025,17:40,Data Analyst,Data Analysis,Company 132,Not selected,Berlin,5.0,1110.0
+17.08.2025,20:40,Junior Business Intelligenece Engineer,Data Analysis,Company 157,Not selected,Berlin,4.0,1111.0
+18.08.2025,16:10,Data Scientist,Data Science,Company 192,Not selected,Munich,9.0,1000.0
+18.08.2025,16:20,Software Engineering Consultant,Developer,Company 193,Not selected,Hamburg,9.0,1111.0
+19.08.2025,19:40,Software Engineer,Developer,Company 194,Waiting,Berlin,,1100.0
+19.08.2025,22:55,Low-Code Developer,Developer,Company 40,Not selected,Berlin,8.0,1101.0
+19.08.2025,23:10,Data Scientist,Data Science,Company 142,Waiting,Berlin,,1100.0
+19.08.2025,23:35,Content Performance Analyst,Data Analysis,Company 195,Waiting,Berlin,,1110.0
+20.08.2025,23:10,Data Analyst Marketing Intelligence and Tech,Data Analysis,Company 111,Not selected,Hamburg,7.0,1100.0
+21.08.2025,22:50,Analytics Engineer / Data Generalist,Data Engineer,Company 106,Not selected,Munich,14.0,1000.0
+21.08.2025,23:00,Automation Engineer – AI Insights,Data Engineer,Company 29,Not selected,Hamburg,1.0,1100.0
+21.08.2025,23:15,AI Implementation Specialist,Data Science,Company 196,Not selected,Berlin,25.0,1111.0
+22.08.2025,19:40,AI Solution Engineer,Data Engineer,Company 197,Waiting,Munich,,1111.0
+22.08.2025,19:45,Software Engineer - Data Infrastructure,Developer,Company 27,Waiting,Berlin,,1000.0
+22.08.2025,20:20,AI Associate,Data Science,Company 198,Waiting,Berlin,,1000.0
+23.08.2025,8:45,Data Analysis,Data Analysis,Company 177,Waiting,Berlin,,1100.0
+23.08.2025,23:20,Speculative application - R&D,Developer,Company 199,Waiting,Berlin,,1011.0
+24.08.2025,7:50,Cloud & Machine Learning Consultant,Machine Learning,Company 200,Not selected,Berlin,22.0,1000.0
+25.08.2025,12:15,Intelligent Document Processing Engineer,Data Engineer,Company 201,Waiting,Berlin,,1111.0
+25.08.2025,12:30,Principle Data Scientist,Data Science,Company 202,Not selected,Berlin,1.0,1000.0
+25.08.2025,13:00,Junior Analytics Engineer,Data Engineer,Company 203,Not selected,Berlin,4.0,1110.0
+27.08.2025,9:00,Product Analyst,Data Analysis,Company 204,Waiting,Dubai,,1000.0
+27.08.2025,9:30,Analyst Pricing & Strategy,Data Analysis,Company 205,Not selected,Berlin,14.0,1111.0
+27.08.2025,9:50,Data Labeler - Arabic Speaker,Data Science,Company 4,Not selected,Berlin,2.0,1000.0
+28.08.2025,0:35,"Data Scientist, AI Systems",Data Science,Company 206,Not selected,Berlin,40.0,1011.0
+28.08.2025,1:10,ML Engineer,Machine Learning,Company 207,Waiting,Dresden,,1111.0
+28.08.2025,13:25,Data Analyst,Data Analysis,Company 208,Waiting,Berlin,,1111.0
+28.08.2025,14:20,Strategy Analyst,Data Analysis,Company 204,Waiting,Dubai,,1000.0
+28.08.2025,14:35,Junior Data Scientist Internship,Data Science,Company 209,Interview,Berlin,11.0,1111.0
+29.08.2025,0:51,Python Developer,Developer,Company 210,Waiting,Berlin,,1000.0
+29.08.2025,10:10,Data Engineer - AI,Data Engineer,Company 211,Not selected,Berlin,3.0,1111.0
+29.08.2025,10:35,Data Scientist (m/w/d) – Analytics & Dashboards,Data Science,Company 212,Not selected,Berlin,26.0,1010.0
+30.08.2025,0:50,Junior BI & Data Science Analyst,Data Science,Company 35,Not selected,Berlin,4.0,1011.0
+30.08.2025,10:50,Model Risk Associate,Data Science,Company 21,Not selected,Berlin,20.0,1100.0
+30.08.2025,11:50, Software Engineer - New Grad,Data Science,Company 213,Not selected,Berlin,4.0,1000.0
+31.08.2025,10:10,Data Analyst - Python Developer,Data Analysis,Company 214,Waiting,Hamburg,,1000.0
+31.08.2025,21:20,Quantitive Analyst,Data Analysis,Company 215,Not selected,Berlin,3.0,1110.0
+01.09.2025,18:00,Junior Data Engineer,Data Engineer,Company 216,Interview,Berlin,9.0,1000.0
+01.09.2025,20:50,Decision Science (Data Analyst),Data Analysis,Company 59,Not selected,Berlin,2.0,1000.0
+02.09.2025,20:30,AI Platform Engineer,Data Engineer,Company 175,Not selected,Berlin,9.0,1110.0
+02.09.2025,22:00,Entimo AG,Data Science,Company 217,Waiting,Berlin,,1000.0
+17.09.2025,14:30,Data Engineer,Data Engineer,Company 218,Waiting,Berlin,,1000.0
