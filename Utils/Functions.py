@@ -2,12 +2,10 @@
 
 from __future__ import annotations
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from upsetplot import UpSet, from_memberships
 
 
 def Clean_data(df: pd.DataFrame) -> pd.DataFrame:
@@ -303,6 +301,9 @@ def Draw_upset(
     element_size: int = 20,
     show_title: bool = False,
 ):
+    import matplotlib.pyplot as plt
+    from upsetplot import UpSet, from_memberships
+
     plot_docs = df_docs.rename(columns=_UPSET_LABELS)
 
     memberships = from_memberships(

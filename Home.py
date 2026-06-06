@@ -2,7 +2,7 @@ import streamlit as st
 
 from Utils.analytics import parse_document_columns, top_n_with_other
 from Utils.data_engineering import get_csv_path, load_applications
-from Utils.Functions import Draw_bar, Draw_boxplot, Draw_pie, Draw_upset
+from Utils.Functions import Draw_bar, Draw_boxplot, Draw_document_combinations_plotly, Draw_pie
 from Utils.streamlit_ui import render_reply_metrics
 
 
@@ -76,14 +76,10 @@ def main():
             "</p>",
             unsafe_allow_html=True,
         )
-        fig_upset = Draw_upset(
-            parse_document_columns(df),
-            figsize=(7, 5.4),
-            tick_fontsize=8,
-            set_label_fontsize=5,
-            show_title=False,
+        st.plotly_chart(
+            Draw_document_combinations_plotly(parse_document_columns(df), h=540),
+            use_container_width=True,
         )
-        st.pyplot(fig_upset, use_container_width=True)
 
     st.divider()
 
