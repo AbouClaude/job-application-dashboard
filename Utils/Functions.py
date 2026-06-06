@@ -263,63 +263,65 @@ def Draw_upset(
         element_size=element_size,
     )
 
-    for subset, style in zip(fig_upset.intersections.index, fig_upset.subset_styles):
-        style["facecolor"] = degree_colors.get(sum(subset), "gray")
+    # Plot with default styles first — custom subset_styles break on Cloud (Py 3.14 + matplotlib)
+    fig = plt.figure(figsize=figsize)
+    result = fig_upset.plot(fig=fig)
+    fig.patch.set_facecolor("#0e1117")
 
-    with plt.style.context("dark_background"):
-        fig = plt.figure(figsize=figsize)
-        result = fig_upset.plot(fig=fig)
-        fig.patch.set_facecolor("#0e1117")
+    totals_ax = result.get("totals")
+    if totals_ax is not None:
+        for patch in totals_ax.patches:
+            patch.set_facecolor("#83c9ff")
+        totals_ax.set_ylabel("")
 
-        totals_ax = result.get("totals")
-        if totals_ax is not None:
-            for patch in totals_ax.patches:
-                patch.set_facecolor("#83c9ff")
-            totals_ax.set_ylabel("")
+    inter_ax = result.get("intersections")
+    if inter_ax is not None:
+        for patch, subset in zip(inter_ax.patches, fig_upset.intersections.index):
+            patch.set_facecolor(degree_colors.get(sum(subset), "#888888"))
+            patch.set_edgecolor("#0e1117")
 
-        for ax in fig.axes:
-            ax.set_facecolor("#0e1117")
-            ax.tick_params(axis="x", colors="white", labelsize=tick_fontsize)
-            ax.tick_params(axis="y", colors="white", labelsize=tick_fontsize)
-            ax.yaxis.label.set_color("white")
-            ax.xaxis.label.set_color("white")
-            for label in ax.get_xticklabels() + ax.get_yticklabels():
-                label.set_fontsize(tick_fontsize)
-                label.set_color("white")
-            for spine in ax.spines.values():
-                spine.set_edgecolor("#444444")
+    for ax in fig.axes:
+        ax.set_facecolor("#0e1117")
+        ax.tick_params(axis="x", colors="white", labelsize=tick_fontsize)
+        ax.tick_params(axis="y", colors="white", labelsize=tick_fontsize)
+        ax.yaxis.label.set_color("white")
+        ax.xaxis.label.set_color("white")
+        for label in ax.get_xticklabels() + ax.get_yticklabels():
+            label.set_fontsize(tick_fontsize)
+            label.set_color("white")
+        for spine in ax.spines.values():
+            spine.set_edgecolor("#444444")
 
-        label_ax = result.get("totals") or result.get("matrix")
-        if label_ax is not None:
-            label_ax.tick_params(
-                axis="y", colors="white", labelsize=set_label_fontsize, pad=12
-            )
-            for label in label_ax.get_yticklabels():
-                text = label.get_text().strip()
-                if not text or text.replace(".", "", 1).isdigit():
-                    continue
-                label.set_fontsize(set_label_fontsize)
-                label.set_color("white")
-                label.set_horizontalalignment("right")
-                label.set_clip_on(False)
+    label_ax = result.get("totals") or result.get("matrix")
+    if label_ax is not None:
+        label_ax.tick_params(
+            axis="y", colors="white", labelsize=set_label_fontsize, pad=12
+        )
+        for label in label_ax.get_yticklabels():
+            text = label.get_text().strip()
+            if not text or text.replace(".", "", 1).isdigit():
+                continue
+            label.set_fontsize(set_label_fontsize)
+            label.set_color("white")
+            label.set_horizontalalignment("right")
+            label.set_clip_on(False)
 
-        inter_ax = result.get("intersections")
-        if inter_ax is not None:
-            inter_ax.tick_params(axis="x", labelsize=tick_fontsize, colors="white")
-            inter_ax.tick_params(axis="y", labelsize=tick_fontsize, colors="white")
-            for label in inter_ax.get_xticklabels():
-                label.set_fontsize(tick_fontsize)
+    if inter_ax is not None:
+        inter_ax.tick_params(axis="x", labelsize=tick_fontsize, colors="white")
+        inter_ax.tick_params(axis="y", labelsize=tick_fontsize, colors="white")
+        for label in inter_ax.get_xticklabels():
+            label.set_fontsize(tick_fontsize)
 
-        if show_title:
-            fig.suptitle(
-                "Document Combination Frequency",
-                fontsize=title_fontsize,
-                fontweight="bold",
-                color="white",
-                y=0.98,
-            )
-            fig.subplots_adjust(left=0.50, right=0.97, top=0.88, bottom=0.18, wspace=0.55)
-        else:
-            fig.subplots_adjust(left=0.50, right=0.97, top=0.96, bottom=0.18, wspace=0.55)
+    if show_title:
+        fig.suptitle(
+            "Document Combination Frequency",
+            fontsize=title_fontsize,
+            fontweight="bold",
+            color="white",
+            y=0.98,
+        )
+        fig.subplots_adjust(left=0.50, right=0.97, top=0.88, bottom=0.18, wspace=0.55)
+    else:
+        fig.subplots_adjust(left=0.50, right=0.97, top=0.96, bottom=0.18, wspace=0.55)
 
     return fig
