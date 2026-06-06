@@ -44,7 +44,7 @@ Raw CSV → clean column names → filter irrelevant rows → parse dates → **
 ## Quick start
 
 ```bash
-git clone https://github.com/Abou_Claude/job-application-dashboard.git
+git clone https://github.com/AbouClaude/job-application-dashboard.git
 cd job-application-dashboard
 python -m venv .venv
 .venv\Scripts\activate        # Windows
@@ -56,13 +56,31 @@ Open the local URL shown in the terminal (usually `http://localhost:8501`).
 
 ## Dashboard preview (no install)
 
-A static snapshot of the app is included as **[Jobs_Applications_Dashboard.mhtml](Jobs_Applications_Dashboard.mhtml)**.
+A static snapshot is included: **Jobs_Applications_Dashboard.mhtml**
 
-- **Download** the file from this repo (or clone the repo and open it locally)
-- **Open** it in **Chrome** or **Edge** (File → Open, or double-click)
-- View charts and layout **without** running Python or Streamlit
+**GitHub cannot display `.mhtml` in the browser** — clicking the filename shows source code, not the dashboard. Download the file first:
 
-> MHTML is a saved web page export. Interactivity may be limited compared to the live app; for the full experience, use `streamlit run Home.py` or deploy on Streamlit Cloud.
+**Option A — Download button (easiest)**  
+1. Open [Jobs_Applications_Dashboard.mhtml](https://github.com/AbouClaude/job-application-dashboard/blob/main/Jobs_Applications_Dashboard.mhtml) on GitHub.  
+2. Click the **↓ Download** button (top-right of the file view).  
+3. Open the downloaded file in **Chrome** or **Edge**.
+
+**Option B — Raw + Save As**  
+1. Open the file on GitHub → click **Raw** (top-right).  
+2. Press **Ctrl+S** → save as `Jobs_Applications_Dashboard.mhtml` (keep the `.mhtml` extension).
+
+**Option C — Clone the repo**  
+```bash
+git clone https://github.com/AbouClaude/job-application-dashboard.git
+```
+Open `Jobs_Applications_Dashboard.mhtml` from the cloned folder.
+
+- Use **Chrome** or **Edge** only — Firefox/Safari do not render MHTML reliably.  
+- If the page is blank on Windows: right-click the file → **Properties** → check **Unblock** → OK → open again.
+
+To **regenerate** the preview after UI changes: run `streamlit run Home.py`, open the app in Chrome/Edge, then **Ctrl+S** → save as **Webpage, Single File (*.mhtml)** and replace `Jobs_Applications_Dashboard.mhtml` in the repo root.
+
+> MHTML is a saved web page export. Interactivity may be limited compared to the live app; for the full experience, run `streamlit run Home.py` locally.
 
 ## Project structure
 
@@ -92,14 +110,6 @@ architecture.html          # Interactive architecture diagrams
 ```bash
 python test_data_engineering.py
 ```
-
-## Deploy (Streamlit Community Cloud)
-
-1. Push this repo to GitHub.
-2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
-3. **New app** → select this repository → main file: `Home.py` → **Deploy**.
-
-No secrets required — the app uses `data/Jobs_Application.csv` by default.
 
 ## CSV schema
 

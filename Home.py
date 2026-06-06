@@ -2,7 +2,7 @@ import streamlit as st
 
 from Utils.analytics import parse_document_columns, top_n_with_other
 from Utils.data_engineering import get_csv_path, load_applications
-from Utils.Functions import Draw_bar, Draw_boxplot, Draw_pie, Draw_upset_png
+from Utils.Functions import Draw_bar, Draw_boxplot, Draw_pie
 from Utils.streamlit_ui import render_document_upset, render_reply_metrics
 
 

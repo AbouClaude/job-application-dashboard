@@ -1,0 +1,2 @@
+# MHTML uses quoted-printable encoding; LF normalization breaks the file on GitHub.
+*.mhtml binary
