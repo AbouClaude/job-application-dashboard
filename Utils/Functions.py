@@ -233,6 +233,66 @@ _UPSET_LABELS = {
     "Master_Certificate": "Master cert.",
 }
 
+_DEGREE_COLORS = {1: "#636efa", 2: "#ffa15a", 3: "#00cc96", 4: "#d62728"}
+
+
+def _document_combo_labels(df_docs: pd.DataFrame) -> pd.Series:
+    plot_docs = df_docs.rename(columns=_UPSET_LABELS)
+
+    def label_row(row: pd.Series) -> str:
+        parts = [col for col in plot_docs.columns if row[col] == 1]
+        return " + ".join(parts) if parts else "None"
+
+    return plot_docs.apply(label_row, axis=1)
+
+
+def Draw_document_combinations_plotly(df_docs: pd.DataFrame, s: int = 14, h: int = 500):
+    """Plotly fallback — works on Streamlit Cloud (upsetplot + matplotlib 3.10+ breaks)."""
+    labels = _document_combo_labels(df_docs)
+    counts = labels.value_counts().sort_values(ascending=True)
+    bar_colors = [
+        _DEGREE_COLORS.get(label.count("+") + 1, "#888888") for label in counts.index
+    ]
+
+    fig = go.Figure(
+        go.Bar(
+            x=counts.values,
+            y=counts.index,
+            orientation="h",
+            marker=dict(color=bar_colors),
+        )
+    )
+    fig.update_layout(
+        title=dict(
+            text="<b>Document Combination Frequency</b>",
+            font=dict(size=s + 6, family="Arial"),
+        ),
+        xaxis=dict(
+            title=dict(text="<b>Applications</b>", font=dict(size=s + 2, family="Arial")),
+            tickfont=dict(size=s, family="Arial"),
+        ),
+        yaxis=dict(tickfont=dict(size=s - 2, family="Arial")),
+        height=h,
+        margin=dict(l=120),
+    )
+    return fig
+
+
+def draw_document_chart(df_docs: pd.DataFrame, **upset_kwargs) -> tuple[str, object]:
+    """
+    Return ('pyplot', matplotlib.Figure) or ('plotly', go.Figure).
+    UpSet fails on Streamlit Cloud (Python 3.14 + matplotlib 3.10+).
+    """
+    import sys
+
+    if sys.version_info >= (3, 13):
+        return "plotly", Draw_document_combinations_plotly(df_docs)
+
+    try:
+        return "pyplot", Draw_upset(df_docs, **upset_kwargs)
+    except (ValueError, TypeError):
+        return "plotly", Draw_document_combinations_plotly(df_docs)
+
 
 def Draw_upset(
     df_docs: pd.DataFrame,
