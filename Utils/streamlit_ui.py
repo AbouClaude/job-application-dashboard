@@ -6,6 +6,7 @@ import streamlit as st
 import pandas as pd
 
 from Utils.analytics import reply_metrics
+from Utils.Functions import Draw_upset_png
 
 
 def render_reply_metrics(df: pd.DataFrame) -> None:
@@ -16,3 +17,18 @@ def render_reply_metrics(df: pd.DataFrame) -> None:
     c2.metric("Reply rate", f"{stats['reply_rate']}%")
     c3.metric("Avg reply (days)", stats["avg_reply"])
     c4.metric("STD reply (days)", stats["std_reply"])
+
+
+@st.cache_data(show_spinner=False)
+def _build_upset_image(_cache_version: int, df_docs: pd.DataFrame) -> bytes:
+    return Draw_upset_png(
+        df_docs,
+        figsize=(7, 5.4),
+        tick_fontsize=8,
+        set_label_fontsize=5,
+        show_title=False,
+    )
+
+
+def render_document_upset(df_docs: pd.DataFrame) -> None:
+    st.image(_build_upset_image(9, df_docs), use_container_width=True)

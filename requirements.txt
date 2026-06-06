@@ -1,6 +1,6 @@
 streamlit>=1.28
-pandas>=2.0,<2.3
+pandas>=2.0
 numpy>=1.24
 plotly>=5.18
-matplotlib==3.8.4
-upsetplot==0.9.0
+matplotlib>=3.7
+upsetplot>=0.9
