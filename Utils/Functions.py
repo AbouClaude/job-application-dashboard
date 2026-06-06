@@ -233,6 +233,49 @@ _UPSET_LABELS = {
     "Master_Certificate": "Master cert.",
 }
 
+_DEGREE_COLORS = {1: "#636efa", 2: "#ffa15a", 3: "#00cc96", 4: "#d62728"}
+
+
+def _document_combo_labels(df_docs: pd.DataFrame) -> pd.Series:
+    plot_docs = df_docs.rename(columns=_UPSET_LABELS)
+
+    def label_row(row: pd.Series) -> str:
+        parts = [col for col in plot_docs.columns if row[col] == 1]
+        return " + ".join(parts) if parts else "None"
+
+    return plot_docs.apply(label_row, axis=1)
+
+
+def Draw_document_combinations_plotly(df_docs: pd.DataFrame, s: int = 14, h: int = 500):
+    """Cloud fallback when UpSet/matplotlib is unavailable."""
+    labels = _document_combo_labels(df_docs)
+    counts = labels.value_counts().sort_values(ascending=True)
+    bar_colors = [
+        _DEGREE_COLORS.get(label.count("+") + 1, "#888888") for label in counts.index
+    ]
+    fig = go.Figure(
+        go.Bar(
+            x=counts.values,
+            y=counts.index,
+            orientation="h",
+            marker=dict(color=bar_colors),
+        )
+    )
+    fig.update_layout(
+        template="plotly_dark",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="#0e1117",
+        xaxis=dict(
+            title=dict(text="<b>Applications</b>", font=dict(size=s + 2, family="Arial")),
+            tickfont=dict(size=s, family="Arial"),
+            gridcolor="#333",
+        ),
+        yaxis=dict(tickfont=dict(size=s - 2, family="Arial")),
+        height=h,
+        margin=dict(l=10, r=10, t=10, b=40),
+    )
+    return fig
+
 
 def _patch_upsetplot() -> None:
     import upsetplot.plotting as plotting
