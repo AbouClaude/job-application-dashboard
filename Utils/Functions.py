@@ -25,21 +25,31 @@ def fill_time_nanvalue(df: pd.DataFrame) -> pd.DataFrame:
         return df
 
     df = df.copy()
-    df["hour"] = pd.to_datetime(df["Time"], format="%H:%M", errors="coerce").dt.hour
+    # Object dtype — avoids Arrow/string column TypeError on Streamlit Cloud
+    df["Time"] = df["Time"].astype(object).where(
+        df["Time"].notna() & (df["Time"].astype(str).str.strip() != ""),
+        other=None,
+    )
+
+    parsed = pd.to_datetime(
+        df["Time"].astype(str).str.strip().replace("None", ""),
+        format="%H:%M",
+        errors="coerce",
+    )
+    df["hour"] = parsed.dt.hour
 
     hour_probs = df["hour"].value_counts(normalize=True)
     nan_mask = df["hour"].isna()
     nan_count = int(nan_mask.sum())
 
     if nan_count and not hour_probs.empty:
-        df.loc[nan_mask, "hour"] = np.random.choice(
+        imputed_hours = np.random.choice(
             hour_probs.index,
             size=nan_count,
             p=hour_probs.values,
         )
-        df.loc[nan_mask, "Time"] = pd.to_datetime(
-            df.loc[nan_mask, "hour"], format="%H"
-        ).dt.time
+        df.loc[nan_mask, "hour"] = imputed_hours
+        df.loc[nan_mask, "Time"] = [f"{int(h):02d}:00" for h in imputed_hours]
 
     df.drop(columns=["hour"], inplace=True)
     return df

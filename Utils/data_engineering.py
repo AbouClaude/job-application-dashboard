@@ -108,7 +108,7 @@ def get_months_chronological(df: pd.DataFrame) -> list[str]:
 
 
 @st.cache_data
-def load_applications(_cache_version: int = 7) -> pd.DataFrame:
+def load_applications(_cache_version: int = 8) -> pd.DataFrame:
     """Read CSV + clean. Cached for Streamlit pages."""
     df = read_raw_applications()
     return ensure_month_column(prepare_applications(df))
