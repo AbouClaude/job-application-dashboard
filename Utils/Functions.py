@@ -245,7 +245,7 @@ def _document_combo_labels(df_docs: pd.DataFrame) -> pd.Series:
 
 
 def Draw_document_combinations_plotly(df_docs: pd.DataFrame, s: int = 14, h: int = 500):
-    """Plotly fallback — works on Streamlit Cloud (upsetplot + matplotlib 3.10+ breaks)."""
+    """Plotly fallback when UpSet (matplotlib) is unavailable."""
     labels = _document_combo_labels(df_docs)
     counts = labels.value_counts().sort_values(ascending=True)
     bar_colors = [
@@ -261,34 +261,26 @@ def Draw_document_combinations_plotly(df_docs: pd.DataFrame, s: int = 14, h: int
         )
     )
     fig.update_layout(
-        title=dict(
-            text="<b>Document Combination Frequency</b>",
-            font=dict(size=s + 6, family="Arial"),
-        ),
+        template="plotly_dark",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="#0e1117",
         xaxis=dict(
             title=dict(text="<b>Applications</b>", font=dict(size=s + 2, family="Arial")),
             tickfont=dict(size=s, family="Arial"),
+            gridcolor="#333",
         ),
         yaxis=dict(tickfont=dict(size=s - 2, family="Arial")),
         height=h,
-        margin=dict(l=120),
+        margin=dict(l=10, r=10, t=10, b=40),
     )
     return fig
 
 
 def draw_document_chart(df_docs: pd.DataFrame, **upset_kwargs) -> tuple[str, object]:
-    """
-    Return ('pyplot', matplotlib.Figure) or ('plotly', go.Figure).
-    UpSet fails on Streamlit Cloud (Python 3.14 + matplotlib 3.10+).
-    """
-    import sys
-
-    if sys.version_info >= (3, 13):
-        return "plotly", Draw_document_combinations_plotly(df_docs)
-
+    """Try UpSet (matplotlib); fall back to Plotly bar chart if it fails."""
     try:
         return "pyplot", Draw_upset(df_docs, **upset_kwargs)
-    except (ValueError, TypeError):
+    except (ValueError, TypeError, ImportError):
         return "plotly", Draw_document_combinations_plotly(df_docs)
 
 

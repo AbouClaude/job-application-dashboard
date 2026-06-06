@@ -2,7 +2,7 @@ import streamlit as st
 
 from Utils.analytics import parse_document_columns, top_n_with_other
 from Utils.data_engineering import get_csv_path, load_applications
-from Utils.Functions import Draw_bar, Draw_boxplot, Draw_document_combinations_plotly, Draw_pie
+from Utils.Functions import Draw_bar, Draw_boxplot, Draw_pie, draw_document_chart
 from Utils.streamlit_ui import render_reply_metrics
 
 
@@ -72,14 +72,21 @@ def main():
             '<p style="font-size:0.95rem; line-height:1.45; opacity:0.8; margin:0 0 0.5rem 0;">'
             "Shows which documents you submitted together "
             "(CV, cover letter, reference letter, master certificate). "
-            "Each bar is one combination; taller bars = more applications with that mix."
+            "Each combination is one bar; longer bars = more applications with that mix."
             "</p>",
             unsafe_allow_html=True,
         )
-        st.plotly_chart(
-            Draw_document_combinations_plotly(parse_document_columns(df), h=540),
-            use_container_width=True,
+        chart_kind, chart_fig = draw_document_chart(
+            parse_document_columns(df),
+            figsize=(7, 5.4),
+            tick_fontsize=8,
+            set_label_fontsize=5,
+            show_title=False,
         )
+        if chart_kind == "pyplot":
+            st.pyplot(chart_fig, use_container_width=True)
+        else:
+            st.plotly_chart(chart_fig, use_container_width=True)
 
     st.divider()
 
