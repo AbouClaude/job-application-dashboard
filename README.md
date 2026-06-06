@@ -1,76 +1,113 @@
 # Job Application Dashboard
 
-Streamlit dashboard for tracking and analyzing job applications from a CSV export.
+An interactive **Streamlit** dashboard for analyzing job applications from a CSV export. Track reply rates, explore status and location patterns, compare document combinations, and drill down by month.
 
-## Architecture
+## Features
 
-- **[ARCHITECTURE.md](ARCHITECTURE.md)** — module layout & data flow (Mermaid)
-- **[architecture.html](architecture.html)** — interactive diagrams in the browser
+**Home — overview**
+- Key metrics: total applications, reply rate, average & standard deviation of reply time (days)
+- Status and position-type distribution (pie charts)
+- Applications by city and top employers (bar charts)
+- Document combination analysis ([UpSet plot](https://upset.app/)) — CV, cover letter, reference letter, master certificate
+- Reply time distribution by month (box plot)
+
+**Monthly Analysis**
+- Filter by one or more months
+- Daily application timeline stacked by status
+- Status & position breakdown for the selected period
+
+## Tech stack
+
+| Tool | Role |
+|------|------|
+| [Streamlit](https://streamlit.io/) | Multipage web app |
+| [Pandas](https://pandas.pydata.org/) | Data loading, cleaning, aggregation |
+| [NumPy](https://numpy.org/) | Metrics & time imputation |
+| [Plotly](https://plotly.com/python/) | Interactive charts |
+| [Matplotlib](https://matplotlib.org/) + [UpSetPlot](https://upsetplot.readthedocs.io/) | Document combination chart |
+
+## Sample data & privacy
+
+This repo is **safe to share publicly**. The bundled file `data/Jobs_Application.csv` is a prepared sample — not raw personal data:
+
+- **300 applications** (first rows after the same filters used in the app)
+- **Anonymous employer names** — real companies are replaced with `Company 1`, `Company 2`, … so application counts stay correct without exposing who you applied to
+- **No notes column** — personal comments are omitted
+- **Missing times preserved** — some rows keep an empty `Time` field so the app’s time-imputation step still runs when you launch it
+
+Status labels use user-friendly wording (e.g. `Not selected` instead of `Rejected`).
+
+## Data pipeline
+
+Raw CSV → clean column names → filter irrelevant rows → parse dates → **impute missing application times** from the observed hour distribution → derive monthly labels → cache for the UI.
 
 ## Quick start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/job-application-dashboard.git
+git clone https://github.com/Abou_Claude/job-application-dashboard.git
 cd job-application-dashboard
 python -m venv .venv
-.venv\Scripts\activate
+.venv\Scripts\activate        # Windows
 pip install -r requirements.txt
 streamlit run Home.py
 ```
 
-The repo ships with **`data/Jobs_Application.csv`** — first 300 applications after filtering, anonymous company names, no notes column.
+Open the local URL shown in the terminal (usually `http://localhost:8501`).
 
-## Data
+## Dashboard preview (no install)
 
-| File | Purpose |
-|------|---------|
-| `data/Jobs_Application.csv` | Default for clone / deploy (300 rows, anonymous employers) |
-| `Jobs Applications - Jobs Applying.csv` | Your private file — **gitignored**, local only |
+A static snapshot of the app is included as **[Jobs_Applications_Dashboard.mhtml](Jobs_Applications_Dashboard.mhtml)**.
 
-### Build the public CSV (do this before GitHub push)
+- **Download** the file from this repo (or clone the repo and open it locally)
+- **Open** it in **Chrome** or **Edge** (File → Open, or double-click)
+- View charts and layout **without** running Python or Streamlit
 
-The dashboard reads `data/Jobs_Application.csv`. That file is **not** edited by hand — you generate it from your private spreadsheet:
+> MHTML is a saved web page export. Interactivity may be limited compared to the live app; for the full experience, use `streamlit run Home.py` or deploy on Streamlit Cloud.
 
-1. Keep your real data in `Jobs Applications - Jobs Applying.csv` (never commit this file).
-2. From the project folder, run:
+## Project structure
 
-```powershell
-cd "C:\Users\hazem\job searching project"
-python scripts/build_public_csv.py
+```
+Home.py                    # Overview dashboard (entry point)
+Pages/
+  Month_Analysis.py        # Monthly drill-down
+Utils/
+  data_engineering.py      # CSV load, clean, cache
+  analytics.py             # Metrics & helpers
+  Functions.py             # Chart builders
+  streamlit_ui.py          # Shared UI components
+data/
+  Jobs_Application.csv              # Sample dataset (committed)
+Jobs_Applications_Dashboard.mhtml   # Static dashboard preview
+ARCHITECTURE.md                     # Module layout & data flow
+architecture.html          # Interactive architecture diagrams
 ```
 
-What the script does:
+## Architecture
 
-- Reads the private CSV
-- Applies the same filters as the app (e.g. excludes "Normal Work")
-- Keeps the **first 300** rows after filtering
-- Replaces employer names with `Company 1`, `Company 2`, …
-- Removes the **Notes** column (keeps **Time** for time imputation)
-- Writes `data/Jobs_Application.csv`
-
-3. Run the app to verify:
-
-```powershell
-streamlit run Home.py
-```
-
-Open the URL shown in the terminal. Use the sidebar on **Home** to filter by month, status, or position type. Open **Monthly Analysis** from the sidebar for day-by-day breakdowns.
-
-## Data
-
-Default CSV: `Jobs Applications - Jobs Applying.csv` in the project root.
-
-Override with an environment variable:
-
-```powershell
-$env:JOB_APPLICATIONS_CSV = "C:\path\to\your\file.csv"
-streamlit run Home.py
-```
-
-Expected columns: `Date`, `Time`, `Position Name`, `Position Type`, `Company Name`, `Status`, `Location`, `Action Period`, `CV_CL_RL_CR`, `Notes`.
+- [ARCHITECTURE.md](ARCHITECTURE.md) — Mermaid diagrams (structure & data flow)
+- [architecture.html](architecture.html) — open in a browser for rendered diagrams
 
 ## Tests
 
 ```bash
 python test_data_engineering.py
+```
+
+## Deploy (Streamlit Community Cloud)
+
+1. Push this repo to GitHub.
+2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
+3. **New app** → select this repository → main file: `Home.py` → **Deploy**.
+
+No secrets required — the app uses `data/Jobs_Application.csv` by default.
+
+## CSV schema
+
+Expected columns: `Date`, `Time`, `Position Name`, `Position Type`, `Company Name`, `Status`, `Location`, `Action Period`, `CV_CL_RL_CR`
+
+Optional override via environment variable:
+
+```powershell
+$env:JOB_APPLICATIONS_CSV = "C:\path\to\your\file.csv"
+streamlit run Home.py
 ```
