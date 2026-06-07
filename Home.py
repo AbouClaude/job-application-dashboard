@@ -52,6 +52,7 @@ def main():
                 "Applications in Cities",
                 "Number of Applications",
                 "Cities",
+                h=640,
             ),
             use_container_width=True,
         )
@@ -63,6 +64,7 @@ def main():
             "Applications in Companies",
             "Number of Applications",
             "Companies",
+            h=640,
         )
         fig_bar.update_layout(margin=dict(l=200))
         st.plotly_chart(fig_bar, use_container_width=True)
