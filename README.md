@@ -49,6 +49,7 @@ cd job-application-dashboard
 python -m venv .venv
 .venv\Scripts\activate        # Windows
 pip install -r requirements.txt
+pip install -r requirements-local.txt   # optional: UpSet plot on Home (local only)
 streamlit run Home.py
 ```
 
@@ -56,31 +57,17 @@ Open the local URL shown in the terminal (usually `http://localhost:8501`).
 
 ## Dashboard preview (no install)
 
-A static snapshot is included: **Jobs_Applications_Dashboard.mhtml**
+If you want to see the results without installing anything, download **[dashboard-preview.html](dashboard-preview.html)** and open it in your browser.
 
-**GitHub cannot display `.mhtml` in the browser** — clicking the filename shows source code, not the dashboard. Download the file first:
+No setup required — the file includes everything needed and works offline.
 
-**Option A — Download button (easiest)**  
-1. Open [Jobs_Applications_Dashboard.mhtml](https://github.com/AbouClaude/job-application-dashboard/blob/main/Jobs_Applications_Dashboard.mhtml) on GitHub.  
-2. Click the **↓ Download** button (top-right of the file view).  
-3. Open the downloaded file in **Chrome** or **Edge**.
+To rebuild the preview after UI changes:
 
-**Option B — Raw + Save As**  
-1. Open the file on GitHub → click **Raw** (top-right).  
-2. Press **Ctrl+S** → save as `Jobs_Applications_Dashboard.mhtml` (keep the `.mhtml` extension).
-
-**Option C — Clone the repo**  
 ```bash
-git clone https://github.com/AbouClaude/job-application-dashboard.git
+python scripts/build_preview_html.py
 ```
-Open `Jobs_Applications_Dashboard.mhtml` from the cloned folder.
 
-- Use **Chrome** or **Edge** only — Firefox/Safari do not render MHTML reliably.  
-- If the page is blank on Windows: right-click the file → **Properties** → check **Unblock** → OK → open again.
-
-To **regenerate** the preview after UI changes: run `streamlit run Home.py`, open the app in Chrome/Edge, then **Ctrl+S** → save as **Webpage, Single File (*.mhtml)** and replace `Jobs_Applications_Dashboard.mhtml` in the repo root.
-
-> MHTML is a saved web page export. Interactivity may be limited compared to the live app; for the full experience, run `streamlit run Home.py` locally.
+> The **UpSet plot** is a static image (same as on Home). **Monthly Analysis** is only available when you run `streamlit run Home.py`.
 
 ## Project structure
 
@@ -93,10 +80,13 @@ Utils/
   analytics.py             # Metrics & helpers
   Functions.py             # Chart builders
   streamlit_ui.py          # Shared UI components
+scripts/
+  build_preview_html.py    # Generate dashboard-preview.html
 data/
-  Jobs_Application.csv              # Sample dataset (committed)
-Jobs_Applications_Dashboard.mhtml   # Static dashboard preview
-ARCHITECTURE.md                     # Module layout & data flow
+  Jobs_Application.csv     # Sample dataset (committed)
+dashboard-preview.html     # Static dashboard preview (download & open)
+requirements-local.txt     # matplotlib + upsetplot (local UpSet plot)
+ARCHITECTURE.md            # Module layout & data flow
 architecture.html          # Interactive architecture diagrams
 ```
 

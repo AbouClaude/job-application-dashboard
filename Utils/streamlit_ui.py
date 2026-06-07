@@ -2,11 +2,22 @@
 
 from __future__ import annotations
 
+import os
+from pathlib import Path
+
 import streamlit as st
 import pandas as pd
 
 from Utils.analytics import reply_metrics
-from Utils.Functions import Draw_document_combinations_plotly, Draw_upset_png
+from Utils.Functions import Draw_document_combinations_plotly
+
+
+def _is_streamlit_cloud() -> bool:
+    """True on Streamlit Community Cloud (UpSet/matplotlib hang there)."""
+    return (
+        os.environ.get("STREAMLIT_RUNTIME_ENVIRONMENT") == "cloud"
+        or Path("/mount/src").exists()
+    )
 
 
 def render_reply_metrics(df: pd.DataFrame) -> None:
@@ -21,7 +32,12 @@ def render_reply_metrics(df: pd.DataFrame) -> None:
 
 @st.cache_data(show_spinner=False)
 def _build_document_chart(_cache_version: int, df_docs: pd.DataFrame) -> tuple[str, object]:
-    """UpSet PNG locally; Plotly bar chart if Cloud deps fail."""
+    """Cloud: Plotly only (fast). Local: UpSet PNG with Plotly fallback."""
+    if _is_streamlit_cloud():
+        return ("plotly", Draw_document_combinations_plotly(df_docs, h=540))
+
+    from Utils.Functions import Draw_upset_png
+
     try:
         return (
             "image",
@@ -38,7 +54,7 @@ def _build_document_chart(_cache_version: int, df_docs: pd.DataFrame) -> tuple[s
 
 
 def render_document_upset(df_docs: pd.DataFrame) -> None:
-    kind, chart = _build_document_chart(10, df_docs)
+    kind, chart = _build_document_chart(11, df_docs)
     if kind == "image":
         st.image(chart, use_container_width=True)
     else:
