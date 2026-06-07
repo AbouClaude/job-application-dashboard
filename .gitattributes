@@ -1,2 +1,5 @@
 # MHTML uses quoted-printable encoding; LF normalization breaks the file on GitHub.
 *.mhtml binary
+
+# Generated preview — exclude from GitHub language stats (otherwise repo shows as HTML).
+dashboard-preview.html linguist-generated=true
